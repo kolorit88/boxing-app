@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".FootballApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appName}"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Football"
+        tools:ignore="UnusedAttribute">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Football">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- XML экран с ComposeView -->
+        <activity
+            android:name=".InfoActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+
+        <!-- Firebase тестовый экран -->
+        <activity
+            android:name=".FirebaseTestActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+
+        <!-- AI Прогноз экран -->
+        <activity
+            android:name=".PredictionActivity"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+
+        <receiver
+            android:name="com.example.football.receiver.BootReceiver"
+            android:exported="true"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.example.football.service.MatchesSyncService"
+            android:exported="false" />
+
+    </application>
+
+</manifest>
