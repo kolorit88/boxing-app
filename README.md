@@ -79,15 +79,15 @@ data/repository/MockMatchRepository.kt - try-catch с логированием
 
 <table>
   <tr>
-    <td><img src="screan/1.png" alt="Главный экран" width="250"></td>
-    <td><img src="screan/2.png" alt="Поиск" width="250"></td>
+    <td><img src="screan/1.jpg" alt="Главный экран" width="250"></td>
+    <td><img src="screan/2.jpg" alt="Поиск" width="250"></td>
   </tr>
   <tr>
-    <td><img src="screan/3.png" alt="Детали матча" width="250"></td>
-    <td><img src="screan/4.png" alt="AI прогноз" width="250"></td>
+    <td><img src="screan/3.jpg" alt="Детали матча" width="250"></td>
+    <td><img src="screan/4.jpg" alt="AI прогноз" width="250"></td>
   </tr>
   <tr>
-    <td><img src="screan/5.png" alt="Информация" width="250"></td>
-    <td><img src="screan/6.png" alt="Firebase тест" width="250"></td>
+    <td><img src="screan/5.jpg" alt="Информация" width="250"></td>
+    <td><img src="screan/6.jpg" alt="Firebase тест" width="250"></td>
   </tr>
 </table>
