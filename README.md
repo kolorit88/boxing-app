@@ -77,10 +77,17 @@ feature/home/HomeViewModel.kt - отлов нефатальных ошибок
 feature/search/SearchViewModel.kt - отлов нефатальных ошибок
 data/repository/MockMatchRepository.kt - try-catch с логированием
 
-
-![Скриншот 1](screan/1.png)
-![Скриншот 2](screan/2.png)
-![Скриншот 3](screan/3.png)
-![Скриншот 4](screan/4.png)
-![Скриншот 5](screan/5.png)
-![Скриншот 6](screan/6.png)
+<table>
+  <tr>
+    <td><img src="screan/1.png" alt="Главный экран" width="250"></td>
+    <td><img src="screan/2.png" alt="Поиск" width="250"></td>
+  </tr>
+  <tr>
+    <td><img src="screan/3.png" alt="Детали матча" width="250"></td>
+    <td><img src="screan/4.png" alt="AI прогноз" width="250"></td>
+  </tr>
+  <tr>
+    <td><img src="screan/5.png" alt="Информация" width="250"></td>
+    <td><img src="screan/6.png" alt="Firebase тест" width="250"></td>
+  </tr>
+</table>
