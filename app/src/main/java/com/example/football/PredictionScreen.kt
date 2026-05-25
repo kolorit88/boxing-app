@@ -79,7 +79,7 @@ fun PredictionScreen(repository: MatchRepository) {
     ) {
         // Заголовок
         Text(
-            text = "🤖 AI Прогноз матча",
+            text = "AI Прогноз матча",
             style = MaterialTheme.typography.headlineMedium
         )
 
@@ -101,7 +101,7 @@ fun PredictionScreen(repository: MatchRepository) {
                     modifier = Modifier.padding(16.dp)
                 ) {
                     Text(
-                        text = "📋 Выберите матч для анализа",
+                        text = "Выберите матч для анализа",
                         style = MaterialTheme.typography.titleMedium
                     )
                     Spacer(modifier = Modifier.height(8.dp))
@@ -134,7 +134,7 @@ fun PredictionScreen(repository: MatchRepository) {
                                             MaterialTheme.colorScheme.onSurface
                                     )
                                     Text(
-                                        text = match.league ?: "Неизвестная лига",  // ← Исправлено
+                                        text = match.league ?: "Неизвестная лига",  
                                         style = MaterialTheme.typography.bodySmall,
                                         color = MaterialTheme.colorScheme.onSurfaceVariant
                                     )
@@ -226,7 +226,7 @@ fun PredictionScreen(repository: MatchRepository) {
                         ) {
                             if (text.contains("Gemini") || text.contains("прогноз")) {
                                 Text(
-                                    text = "🧠 Анализ Gemini AI",
+                                    text = "Анализ Gemini AI",
                                     style = MaterialTheme.typography.titleSmall,
                                     color = MaterialTheme.colorScheme.primary
                                 )
@@ -274,7 +274,7 @@ fun PredictionScreen(repository: MatchRepository) {
                     }
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(
-                            text = selectedMatch!!.league ?: "Неизвестная лига",  // ← Исправлено
+                            text = selectedMatch!!.league ?: "Неизвестная лига",  
                             style = MaterialTheme.typography.bodySmall
                         )
                         Text(
@@ -300,16 +300,16 @@ fun PredictionScreen(repository: MatchRepository) {
                         val result = com.example.football.ai.GeminiPredictionService.getMatchPrediction(
                             homeTeam = match.homeTeam,
                             awayTeam = match.awayTeam,
-                            league = match.league ?: "Неизвестная лига"  // ← Исправлено
+                            league = match.league ?: "Неизвестная лига" 
                         )
 
                         result.onSuccess { prediction ->
                             predictionText = prediction
                         }.onFailure { error ->
-                            predictionText = "❌ Ошибка AI: ${error.message}\n\nПроверьте подключение к интернету и API ключ."
+                            predictionText = "Ошибка AI: ${error.message}\n\nПроверьте подключение к интернету и API ключ."
                         }
                     } else {
-                        predictionText = "❌ Пожалуйста, выберите матч для анализа"
+                        predictionText = "Пожалуйста, выберите матч для анализа"
                     }
 
                     isAnalyzing = false
@@ -325,9 +325,9 @@ fun PredictionScreen(repository: MatchRepository) {
                     strokeWidth = 2.dp
                 )
                 Spacer(modifier = Modifier.width(8.dp))
-                Text("Gemini AI анализирует данные...")
+                Text("Женя анализирует данные...")
             } else {
-                Text("🧠 Получить AI прогноз от Gemini")
+                Text("Получить прогноз")
             }
         }
 
@@ -335,7 +335,7 @@ fun PredictionScreen(repository: MatchRepository) {
 
         // Информация
         Text(
-            text = "Google Gemini AI анализирует статистику и предсказывает результат матча",
+            text = "Женя анализирует статистику и предсказывает результат матча",
             style = MaterialTheme.typography.bodySmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
             modifier = Modifier.fillMaxWidth()
