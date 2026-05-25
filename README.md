@@ -76,3 +76,11 @@ app/MainActivity.kt - кнопка краша с диагностическим 
 feature/home/HomeViewModel.kt - отлов нефатальных ошибок
 feature/search/SearchViewModel.kt - отлов нефатальных ошибок
 data/repository/MockMatchRepository.kt - try-catch с логированием
+
+
+![Скриншот 1](screan/1.png)
+![Скриншот 2](screan/2.png)
+![Скриншот 3](screan/3.png)
+![Скриншот 4](screan/4.png)
+![Скриншот 5](screan/5.png)
+![Скриншот 6](screan/6.png)
