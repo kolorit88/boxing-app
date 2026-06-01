@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="#0A0A0A">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/purple_500"
-        app:titleTextColor="@android:color/white"
+        android:background="#000000"
+        app:titleTextColor="#F5F5F5"
         app:navigationIcon="@drawable/ic_back"
         app:navigationContentDescription="Назад" />
 
@@ -19,8 +19,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="4dp">
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#111111">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -32,38 +33,45 @@
                 android:id="@+id/tvInfoTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="О приложении"
+                android:text="🥊 BOXING APP"
                 android:textAlignment="center"
-                android:textSize="22sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="@color/purple_500" />
+                android:textColor="#CC0000"
+                android:letterSpacing="0.1" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="12dp"
+                android:background="#2A2A2A" />
 
             <TextView
                 android:id="@+id/tvAppVersion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:text="Версия: 1.0.0"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray" />
+                android:textSize="13sp"
+                android:textColor="#999999" />
 
             <TextView
                 android:id="@+id/tvBuildType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:text="Сборка: Debug"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray" />
+                android:textSize="13sp"
+                android:textColor="#999999" />
 
             <TextView
                 android:id="@+id/tvLastSync"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="6dp"
                 android:text="Последняя синхронизация: -"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray" />
+                android:textSize="13sp"
+                android:textColor="#999999" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -72,6 +80,6 @@
         android:id="@+id/composeView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp" />
+        android:layout_marginTop="4dp" />
 
 </LinearLayout>

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <style name="Theme.Football" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryDark">@color/purple_700</item>
-        <item name="colorAccent">@color/teal_200</item>
-        <item name="android:statusBarColor">@color/purple_700</item>
+    <style name="Theme.Football" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/red_primary</item>
+        <item name="colorPrimaryDark">@color/red_dark</item>
+        <item name="colorAccent">@color/red_bright</item>
+        <item name="android:windowBackground">@color/black_dark</item>
+        <item name="android:statusBarColor">@color/black_pure</item>
+        <item name="android:navigationBarColor">@color/black_pure</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

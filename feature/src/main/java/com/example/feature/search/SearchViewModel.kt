@@ -24,12 +24,12 @@ class SearchViewModel(
         _state.update { state ->
             state.copy(
                 leagues = listOf(
-                    "АПЛ",
-                    "Ла Лига",
-                    "Бундеслига",
-                    "Серия А",
-                    "Лига 1",
-                    "РПЛ"
+                    "Тяжёлый вес",
+                    "Полутяжёлый вес",
+                    "Суперсредний вес",
+                    "Средний вес",
+                    "Полусредний вес",
+                    "Лёгкий вес"
                 )
             )
         }
@@ -50,7 +50,7 @@ class SearchViewModel(
     fun performSearch() {
         val currentState = _state.value
         if (currentState.selectedLeague.isBlank()) {
-            _state.update { it.copy(error = "Выберите лигу") }
+            _state.update { it.copy(error = "Выберите категорию веса") }
             return
         }
 
@@ -69,7 +69,7 @@ class SearchViewModel(
                         isLoading = false,
                         matches = matches,
                         searchPerformed = true,
-                        error = if (matches.isEmpty()) "Нет матчей для выбранной лиги" else null
+                        error = if (matches.isEmpty()) "Нет боёв в категории ${currentState.selectedLeague}" else null
                     )
                 }
             }.onFailure { error ->
@@ -88,4 +88,3 @@ class SearchViewModel(
         _state.update { it.copy(error = null) }
     }
 }
-

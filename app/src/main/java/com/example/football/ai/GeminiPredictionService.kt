@@ -1,11 +1,10 @@
 package com.example.football.ai
 
 import com.google.ai.client.generativeai.GenerativeModel
-import kotlinx.coroutines.tasks.await
 
 object GeminiPredictionService {
 
-    private const val API_KEY = "AIzaSyAzUw3whrP4ZNyzWEo6VyH-pdNDDAiND9w"
+    private const val API_KEY = ""
 
     private val generativeModel = GenerativeModel(
         modelName = "gemini-3.5-flash",
@@ -19,21 +18,20 @@ object GeminiPredictionService {
     ): Result<String> {
         return try {
             val prompt = """
-                Ты — опытный футбольный аналитик. Дай краткий прогноз на матч.
-                Команды: $homeTeam против $awayTeam.
-                Лига: $league.
+                Ты — опытный боксёрский аналитик и эксперт по единоборствам.
+                Дай краткий профессиональный прогноз на бой.
+                Боксёры: $homeTeam против $awayTeam.
+                Категория веса / организация: $league.
                 Ответ должен быть на русском языке и содержать:
-                1. Вероятный исход матча (победа одной из команд или ничья).
-                2. Предполагаемый счет.
-                3. Краткое обоснование (одним предложением).
-                4. Смешную шутку для поднятия настроения.
-                Ответ должен быть коротким и информативным, не более 3-х предложений.
+                1. Вероятный победитель (и каким образом — нокаут, единогласное решение и т.д.).
+                2. Предполагаемый раунд завершения или "по очкам".
+                3. Краткое тактическое обоснование (одним-двумя предложениями).
+                4. Уровень уверенности в прогнозе (низкий / средний / высокий).
+                Ответ короткий и по делу — не более 4 строк.
             """.trimIndent()
 
             val response = generativeModel.generateContent(prompt)
-            val prediction = response.text ?: "Не удалось получить прогноз от AI."
-
-            Result.success(prediction)
+            Result.success(response.text ?: "Не удалось получить прогноз от AI.")
         } catch (e: Exception) {
             e.printStackTrace()
             Result.failure(e)
